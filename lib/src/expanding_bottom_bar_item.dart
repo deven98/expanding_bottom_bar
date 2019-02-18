@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 /// An item in the ExpandingBottomBar
 class ExpandingBottomBarItem {
-
   /// Icon to be displayed in the BottomNavigationBar
   IconData icon;
 

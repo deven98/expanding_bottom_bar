@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 /// Main BottomNavigationBar class
 class ExpandingBottomBar extends StatefulWidget {
-
   /// Height of the navigation bar item
   final double navBarHeight;
 
@@ -76,7 +75,7 @@ class _ExpandingBottomBarState extends State<ExpandingBottomBar>
               item.icon,
               widget.navBarHeight,
               _controllers[index],
-                  () {
+              () {
                 widget.onIndexChanged(index);
               },
               item.selectedColor,
