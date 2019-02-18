@@ -26,8 +26,8 @@ class ExpandingBottomBar extends StatefulWidget {
     this.navBarHeight = 100.0,
     @required this.items,
     this.animationDuration = const Duration(milliseconds: 200),
-    this.selectedIndex = 0,
-    this.onIndexChanged,
+    @required this.selectedIndex,
+    @required this.onIndexChanged,
     this.backgroundColor = Colors.white,
   }) : assert(items.length >= 2);
 
