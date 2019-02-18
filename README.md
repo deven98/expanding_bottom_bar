@@ -5,7 +5,7 @@ Inspired by the Dribbble design here: https://t.co/BtUlszSmRR
 
 # Demo
 
-![](https://github.com/deven98/flip_box_bar/blob/master/demo.gif)
+![](https://github.com/deven98/expanding_bottom_bar/blob/master/demo.gif)
 
 # Properties
 
