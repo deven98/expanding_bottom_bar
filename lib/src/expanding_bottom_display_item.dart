@@ -45,7 +45,7 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
     super.initState();
     if (widget.controller == null) {
       controller = AnimationController(
-          vsync: this, duration: Duration(milliseconds: 1000));
+          vsync: this, duration: Duration(milliseconds: 200));
     } else {
       controller = widget.controller;
     }

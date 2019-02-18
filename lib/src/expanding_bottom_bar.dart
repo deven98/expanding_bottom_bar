@@ -26,7 +26,7 @@ class ExpandingBottomBar extends StatefulWidget {
   ExpandingBottomBar({
     this.navBarHeight = 100.0,
     @required this.items,
-    this.animationDuration = const Duration(seconds: 1),
+    this.animationDuration = const Duration(milliseconds: 200),
     this.selectedIndex = 0,
     this.onIndexChanged,
     this.backgroundColor = Colors.white,
