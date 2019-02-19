@@ -1,3 +1,3 @@
-## [0.1.1] - 18/02/2019
+## [0.1.2] - 18/02/2019
 
-* Added required tags
+* Changed description
