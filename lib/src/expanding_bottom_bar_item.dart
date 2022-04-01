@@ -12,8 +12,8 @@ class ExpandingBottomBarItem {
   Color selectedColor;
 
   ExpandingBottomBarItem({
-    @required this.icon,
-    @required this.text,
-    @required this.selectedColor,
+    required this.icon,
+    required this.text,
+    required this.selectedColor,
   });
 }
