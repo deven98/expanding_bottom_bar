@@ -87,7 +87,6 @@ class _ExpandingBottomBarState extends State<ExpandingBottomBar>
                 widget.onIndexChanged(index);
               },
               item.selectedColor,
-              item.heightBoxICon,
             );
           }).toList(),
         ),

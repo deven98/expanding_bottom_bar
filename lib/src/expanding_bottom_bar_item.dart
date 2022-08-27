@@ -13,11 +13,9 @@ class ExpandingBottomBarItem {
 
   ///heightBoxICon
 
-  double heightBoxICon;
 
   ExpandingBottomBarItem(
       {required this.icon,
       required this.text,
-      required this.selectedColor,
-      required this.heightBoxICon});
+      required this.selectedColor});
 }
