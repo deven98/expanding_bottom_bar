@@ -32,15 +32,14 @@ class ExpandingDisplayItem extends StatefulWidget {
 class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
     with TickerProviderStateMixin {
   /// Tween for going from 0 to pi/2 radian and vice versa.
-  late Animation animation;
+  Animation animation;
 
   /// Controller for controlling the Box.
-  late AnimationController controller;
+  AnimationController controller;
 
   @override
   void initState() {
     super.initState();
-    // ignore: unnecessary_null_comparison
     if (widget.controller == null) {
       controller = AnimationController(
           vsync: this, duration: Duration(milliseconds: 200));
