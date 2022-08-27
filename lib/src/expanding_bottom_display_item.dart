@@ -72,7 +72,7 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
             widget.color.red,
             widget.color.green,
             widget.color.blue,
-            animation.value / 2.5,
+            animation.value / 3.5,
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
@@ -88,7 +88,7 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(4.0),
+              padding: const EdgeInsets.all(2.0),
               child: animation.value != 0.0
                   ? Text(
                       widget.title,
