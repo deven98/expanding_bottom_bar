@@ -64,7 +64,13 @@ class _ExpandingBottomBarState extends State<ExpandingBottomBar>
     _changeValue();
     return Container(
       height: widget.navBarHeight,
-      color: widget.backgroundColor,
+      decoration: BoxDecoration(
+          color: widget.backgroundColor,
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(0),
+              bottomRight: Radius.circular(0),
+              topLeft: Radius.circular(50),
+              topRight: Radius.circular(50))),
       child: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
