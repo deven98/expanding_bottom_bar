@@ -74,24 +74,22 @@ class _ExpandingBottomBarState extends State<ExpandingBottomBar>
           topLeft: Radius.circular(30.0),
           topRight: Radius.circular(30.0),
         ),
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: widget.items.map((item) {
-              int index = widget.items.indexOf(item);
-              return ExpandingDisplayItem(
-                item.text,
-                item.icon,
-                widget.navBarHeight,
-                _controllers[index],
-                () {
-                  widget.onIndexChanged(index);
-                },
-                item.selectedColor,
-                item.heightBoxICon,
-              );
-            }).toList(),
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: widget.items.map((item) {
+            int index = widget.items.indexOf(item);
+            return ExpandingDisplayItem(
+              item.text,
+              item.icon,
+              widget.navBarHeight,
+              _controllers[index],
+              () {
+                widget.onIndexChanged(index);
+              },
+              item.selectedColor,
+              item.heightBoxICon,
+            );
+          }).toList(),
         ),
       ),
     );

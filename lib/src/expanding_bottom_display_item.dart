@@ -83,7 +83,7 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
               child: Icon(
                 widget.icon,
                 color: widget.color,
-                size: widget.height / 3.5,
+                size: widget.height / 2.5,
               ),
             ),
             Padding(
@@ -93,7 +93,7 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
                       widget.title,
                       style: TextStyle(
                         color: widget.color,
-                        fontSize: (widget.height / 7) * animation.value,
+                        fontSize: (widget.height / 9) * animation.value,
                       ),
                     )
                   : Container(),
