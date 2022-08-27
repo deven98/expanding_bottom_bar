@@ -67,6 +67,7 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
         widget.onTapped();
       },
       child: Container(
+        margin: EdgeInsets.only(bottom: 0, top: 8),
         decoration: BoxDecoration(
           color: Color.fromRGBO(
             widget.color.red,
@@ -80,21 +81,22 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(6.0),
+              padding:
+                  const EdgeInsets.only(right: 6.0, left: 6, bottom: 2, top: 2),
               child: Icon(
                 widget.icon,
                 color: widget.color,
-                size: widget.height / 2.5,
+                size: widget.height / 3.0,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(2.0),
+              padding: const EdgeInsets.only(right: 2, left: 2),
               child: animation.value != 0.0
                   ? Text(
                       widget.title,
                       style: TextStyle(
                         color: widget.color,
-                        fontSize: (widget.height / 9) * animation.value,
+                        fontSize: (widget.height / 7) * animation.value,
                       ),
                     )
                   : Container(),
