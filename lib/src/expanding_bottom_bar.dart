@@ -65,6 +65,13 @@ class _ExpandingBottomBarState extends State<ExpandingBottomBar>
     return Container(
       height: widget.navBarHeight,
       decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0.0, 1.0), //(x,y)
+            blurRadius: 6.0,
+          ),
+        ],
         color: widget.backgroundColor,
         borderRadius: BorderRadius.only(
             topRight: Radius.circular(30), topLeft: Radius.circular(30)),
