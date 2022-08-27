@@ -65,28 +65,33 @@ class _ExpandingBottomBarState extends State<ExpandingBottomBar>
     return Container(
       height: widget.navBarHeight,
       decoration: BoxDecoration(
-          color: widget.backgroundColor,
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(0),
-              bottomRight: Radius.circular(0),
-              topLeft: Radius.circular(50),
-              topRight: Radius.circular(50))),
-      child: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: widget.items.map((item) {
-            int index = widget.items.indexOf(item);
-            return ExpandingDisplayItem(
-              item.text,
-              item.icon,
-              widget.navBarHeight,
-              _controllers[index],
-              () {
-                widget.onIndexChanged(index);
-              },
-              item.selectedColor,
-            );
-          }).toList(),
+        color: widget.backgroundColor,
+        borderRadius: BorderRadius.only(
+            topRight: Radius.circular(30), topLeft: Radius.circular(30)),
+      ),
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(30.0),
+          topRight: Radius.circular(30.0),
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: widget.items.map((item) {
+              int index = widget.items.indexOf(item);
+              return ExpandingDisplayItem(
+                item.text,
+                item.icon,
+                widget.navBarHeight,
+                _controllers[index],
+                () {
+                  widget.onIndexChanged(index);
+                },
+                item.selectedColor,
+                item.heightBoxICon,
+              );
+            }).toList(),
+          ),
         ),
       ),
     );

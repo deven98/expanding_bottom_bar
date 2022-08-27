@@ -10,6 +10,9 @@ class ExpandingDisplayItem extends StatefulWidget {
   /// The height of the box (Carries the BottomNavigationBar height).
   final double height;
 
+  /// The height of the box (Carries the BottomNavigationBar height).
+  final double heightBoxICon;
+
   /// The animation controller to control the flip animation.
   final AnimationController controller;
 
@@ -19,14 +22,8 @@ class ExpandingDisplayItem extends StatefulWidget {
   /// The color of the icon and background when selected
   final Color color;
 
-  ExpandingDisplayItem(
-    this.title,
-    this.icon,
-    this.height,
-    this.controller,
-    this.onTapped,
-    this.color,
-  );
+  ExpandingDisplayItem(this.title, this.icon, this.height, this.controller,
+      this.onTapped, this.color, this.heightBoxICon);
 
   @override
   _ExpandingDisplayItemState createState() => _ExpandingDisplayItemState();
@@ -68,6 +65,7 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
         widget.onTapped();
       },
       child: Container(
+        height: widget.heightBoxICon,
         decoration: BoxDecoration(
           color: Color.fromRGBO(
             widget.color.red,
@@ -78,7 +76,7 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
           borderRadius: BorderRadius.circular(16.0),
         ),
         padding: EdgeInsets.all(8.0),
-        child: Row(
+        child: Column(
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(6.0),
