@@ -24,10 +24,10 @@ class ExpandingBottomBar extends StatefulWidget {
 
   ExpandingBottomBar({
     this.navBarHeight = 100.0,
-    @required this.items,
+    required this.items,
     this.animationDuration = const Duration(milliseconds: 200),
-    @required this.selectedIndex,
-    @required this.onIndexChanged,
+    required this.selectedIndex,
+    required this.onIndexChanged,
     this.backgroundColor = Colors.white,
   }) : assert(items.length >= 2);
 
@@ -64,8 +64,23 @@ class _ExpandingBottomBarState extends State<ExpandingBottomBar>
     _changeValue();
     return Container(
       height: widget.navBarHeight,
-      color: widget.backgroundColor,
-      child: Center(
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0.0, 1.0), //(x,y)
+            blurRadius: 6.0,
+          ),
+        ],
+        color: widget.backgroundColor,
+        borderRadius: BorderRadius.only(
+            topRight: Radius.circular(30), topLeft: Radius.circular(30)),
+      ),
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(30.0),
+          topRight: Radius.circular(30.0),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: widget.items.map((item) {

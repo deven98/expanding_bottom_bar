@@ -35,10 +35,10 @@ class ExpandingDisplayItem extends StatefulWidget {
 class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
     with TickerProviderStateMixin {
   /// Tween for going from 0 to pi/2 radian and vice versa.
-  Animation animation;
+  late Animation animation;
 
   /// Controller for controlling the Box.
-  AnimationController controller;
+  late AnimationController controller;
 
   @override
   void initState() {
@@ -67,28 +67,30 @@ class _ExpandingDisplayItemState extends State<ExpandingDisplayItem>
         widget.onTapped();
       },
       child: Container(
+        margin: EdgeInsets.only(bottom: 0, top: 8),
         decoration: BoxDecoration(
           color: Color.fromRGBO(
             widget.color.red,
             widget.color.green,
             widget.color.blue,
-            animation.value / 2.5,
+            animation.value / 3.5,
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
         padding: EdgeInsets.all(8.0),
-        child: Row(
+        child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(6.0),
+              padding:
+                  const EdgeInsets.only(right: 6.0, left: 6, bottom: 2, top: 2),
               child: Icon(
                 widget.icon,
                 color: widget.color,
-                size: widget.height / 3.5,
+                size: widget.height / 3.0,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(4.0),
+              padding: const EdgeInsets.only(right: 2, left: 2),
               child: animation.value != 0.0
                   ? Text(
                       widget.title,

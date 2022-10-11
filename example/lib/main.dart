@@ -37,21 +37,25 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icons.bookmark_border,
             text: "Home",
             selectedColor: Colors.purple,
+             
           ),
           ExpandingBottomBarItem(
             icon: Icons.favorite_border,
             text: "Likes",
             selectedColor: Colors.pink,
+           
           ),
           ExpandingBottomBarItem(
             icon: Icons.search,
             text: "Search",
             selectedColor: Colors.amber,
+          
           ),
           ExpandingBottomBarItem(
             icon: Icons.star_border,
             text: "Profile",
             selectedColor: Colors.teal,
+            
           ),
         ],
         selectedIndex: demoIndex,

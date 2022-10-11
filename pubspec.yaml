@@ -1,11 +1,10 @@
 name: expanding_bottom_bar
 description: A bottom navigation bar with expanding titles and icons when clicked.
 version: 0.1.2
-author: Deven Joshi <deven9852@gmail.com>
 homepage: https://github.com/deven98/expanding_bottom_bar
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter:

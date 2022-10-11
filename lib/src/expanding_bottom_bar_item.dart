@@ -11,9 +11,11 @@ class ExpandingBottomBarItem {
   /// The color of the selected item
   Color selectedColor;
 
-  ExpandingBottomBarItem({
-    @required this.icon,
-    @required this.text,
-    @required this.selectedColor,
-  });
+  ///heightBoxICon
+
+
+  ExpandingBottomBarItem(
+      {required this.icon,
+      required this.text,
+      required this.selectedColor});
 }
